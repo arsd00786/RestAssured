@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-05T18:17:34 IST" name="Default suite" finished-at="2024-07-05T18:17:35 IST" duration-ms="969">
+    <groups>
+    </groups>
+    <test started-at="2024-07-05T18:17:34 IST" name="Default test" finished-at="2024-07-05T18:17:35 IST" duration-ms="969">
+      <class name="RestNotes.CreateRequestBody">
+        <test-method signature="DeleteUser()[pri:2, instance:RestNotes.CreateRequestBody@537f60bf]" started-at="2024-07-05T18:17:34 IST" name="DeleteUser" finished-at="2024-07-05T18:17:35 IST" duration-ms="939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteUser -->
+      </class> <!-- RestNotes.CreateRequestBody -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

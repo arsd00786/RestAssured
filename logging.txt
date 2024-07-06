@@ -1,0 +1,156 @@
+Request method:	POST
+Request URI:	https://rules-uat.ugrocapital.com/api/v1/run
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer tD6tL7BpRIW9vNmvDBgZ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ruleid": "8777",
+    "programName": "Pricing BRE",
+    "reference_id": "LAFID294161430",
+    "reference_id_2": "",
+    "reference_id_3": "",
+    "application": {
+        "COMMERCIAL": {
+            "CERSAI": 0,
+            "STAMP_DUTY": "",
+            "PROCESSING_FEE": 0,
+            "DOCUMENT_CHARGES": 0,
+            "FORECLOSURE_CHARGES": 0,
+            "LEGAL_TECHNICAL_CHARGES": 3000,
+            "NO_OF_PROPERTIES": 1,
+            "NET_INSURANCE_PENETRATION": 0,
+            "PRE_OR_PART_PAYMENT_CHARGES": 0
+        },
+        "LOAN_DETAILS": {
+            "ROI": 0,
+            "LOAN_AMOUNT": "700000",
+            "PROGRAM_CODE": "USL-SANJ-ABB"
+        }
+    }
+}
+HTTP/1.1 200 OK
+Date: Thu, 14 Mar 2024 05:56:08 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: Apache
+X-Frame-Options: DENY
+Feature-Policy: fullscreen 'none'
+Vary: Authorization
+Upgrade: h2,h2c
+Cache-Control: no-cache, private
+X-XSS-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000;
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: same-origin
+Content-Security-Policy: default-src 'self' 'unsafe-inline' https:; img-src 'self' data:;script-src 'self' 'unsafe-inline' 'unsafe-eval';script-src-elem 'unsafe-inline' *;
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: *
+Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS
+
+{
+    "success": true,
+    "status_code": "200",
+    "response_id": "b468d8423edb61b249919a334d389603",
+    "ruleid": "8777",
+    "programName": "Pricing BRE",
+    "reference_id": "LAFID294161430",
+    "reference_id_2": "",
+    "reference_id_3": "",
+    "engine_id": "",
+    "data": {
+        "final_status": "FAIL",
+        "final_result": false,
+        "deviation_status": true,
+        "rules_result": {
+            "application": {
+                "varResult": {
+                    "standardROI": {
+                        "result": false,
+                        "value": 0,
+                        "message": "Standard ROI norm is not met"
+                    },
+                    "standardProcessingFee": {
+                        "result": false,
+                        "value": 0,
+                        "message": "Processing Fee norm is not met"
+                    },
+                    "standardInsurancePenetration": {
+                        "result": false,
+                        "value": 0,
+                        "message": "Standard Insurance Penetration norm is not met"
+                    },
+                    "standardPartPaymentcharges": {
+                        "result": false,
+                        "value": 0,
+                        "message": "Standard Part Payment Charges norm is not met"
+                    },
+                    "standardForeclosureCharges": {
+                        "result": false,
+                        "value": 0,
+                        "message": "Standard Foreclosure Charges norm is not met"
+                    },
+                    "applicationProgramCode": {
+                        "result": true,
+                        "value": "USL-SANJ-ABB",
+                        "message": "Program Code norm is met"
+                    }
+                },
+                "result": false
+            }
+        },
+        "output": {
+            "application": {
+                "applicationProgramCode": "USL-SANJ-ABB",
+                "standardROI": 0,
+                "standardProcessingFee": 0,
+                "standardInsurancePenetration": 0,
+                "standardPartPaymentcharges": 0,
+                "standardForeclosureCharges": 0
+            }
+        },
+        "deviation": {
+            "application": {
+                "standardROI": [
+                    {
+                        "deviationCode": "DEV-CUST-IRR-3",
+                        "message": "Commerical Norms - Customer IRR >=3%"
+                    }
+                ],
+                "standardProcessingFee": [
+                    {
+                        "deviationCode": "DEV-PF-0",
+                        "message": "Processing Fee"
+                    }
+                ],
+                "standardInsurancePenetration": [
+                    {
+                        "deviationCode": "DEV-INSPEN-0",
+                        "message": "Inurance Penetration"
+                    }
+                ],
+                "standardPartPaymentcharges": [
+                    {
+                        "deviationCode": "DEV-PRE-PART",
+                        "message": "Commerical Norms-Pre/Part payment charges"
+                    }
+                ],
+                "standardForeclosureCharges": [
+                    {
+                        "deviationCode": "DEV-FORE-CLOSURE",
+                        "message": "Commerical Norms-Foreclosure charges"
+                    }
+                ]
+            }
+        }
+    }
+}

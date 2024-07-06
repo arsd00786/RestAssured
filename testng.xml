@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	
+	 <listeners>
+	<listener class-name = "reporter.Setup"/>
+	
+</listeners>
+  <test thread-count="5" name="Test">
+	 
+    <classes>
+		
+     <!-- <class name="Pricing_Bre.SC001_Verify_the_ROI_for_USL_SANJ_ABB"/>
+    <class name="RestAPI.BasicsofRest"/>-->
+    
+    <class name="dataProviderUtility.dataProviderUtil"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
