@@ -1,0 +1,64 @@
+{
+  "student": [
+    {
+      "name": "John Doe",
+      "location": "Delhi",
+      "phone": "1234567890",
+      "courses": [
+        "Math",
+        "Science"
+      ],
+      "id": "1fb4"
+    },
+    {
+      "name": "Mohd Arshad",
+      "location": "Delhi",
+      "phone": "9870570222",
+      "courses": [
+        "Selenium",
+        "Java"
+      ],
+      "id": "5422"
+    },
+    {
+      "name": "Javed Khan",
+      "location": "East-Delhi",
+      "phone": "9870570222",
+      "courses": [
+        "Selenium",
+        "Java"
+      ],
+      "id": "c3a6"
+    },
+    {
+      "id": "b5fb",
+      "courses": [
+        "Protractor",
+        "RestAssured"
+      ],
+      "phone": "123456789",
+      "name": "Prafull Kalle",
+      "location": "Amrawati"
+    },
+    {
+      "id": "8fcc",
+      "courses": [
+        "Physics",
+        "Math"
+      ],
+      "phone": "123456789",
+      "name": "Rehmat Naaz",
+      "location": "Ahmedabad"
+    },
+    {
+      "id": "f520",
+      "name": "Mohd Shadan",
+      "location": "Dilshad Garden",
+      "phone": "9999999999",
+      "courses": [
+        "English",
+        "Science"
+      ]
+    }
+  ]
+}

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestNotes.CreateRequestBody">
+      <class name="RestNotes.SchemaTestAndValidation">
         <methods>
-          <include name="createRequestORGJSONLibrary"/>
+          <include name="schemaValidation"/>
         </methods>
-      </class> <!-- RestNotes.CreateRequestBody -->
+      </class> <!-- RestNotes.SchemaTestAndValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

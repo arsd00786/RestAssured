@@ -1,16 +1,17 @@
 package RestNotes;
 
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-
 import java.util.HashMap;
-
-import org.checkerframework.checker.units.qual.K;
 import org.testng.annotations.Test;
-
-import io.opentelemetry.sdk.logs.data.Body;
-import io.restassured.response.Response;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
+import io.qameta.allure.restassured.AllureRestAssured;
 
 public class StartOne {
 	
@@ -27,14 +28,25 @@ public class StartOne {
 	
 	int id;
 	
+	static AllureRestAssured allureFilter = new AllureRestAssured();
+            
+	
 	@Test(priority = 1) 
+	@Epic("Verifying User")
+	@Feature("How to verify status code")
+	@Owner("Mohd Arshad")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("allureParameterizedTest description")
+	@Step("We hit the api")
+	
 	public void getUsers() {
 		
 		given()
 		
+				.filter(allureFilter)
 		.when()
 				.get("https://reqres.in/api/users?page=2")
-		
+						
 		.then()
 				.statusCode(200)
 				.body("page",equalTo(2))
@@ -42,9 +54,16 @@ public class StartOne {
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test(priority = 2)
+	@Epic("Creating request")
+	@Feature("We hit POST request and create a user")
+	@Severity(SeverityLevel.CRITICAL)
+	@Description("No description required")
+	@Step("We hit the api")
 	void createUser() {
 		
+		@SuppressWarnings("rawtypes")
 		HashMap data = new HashMap();
 		
 		data.put("name", "Mohd Arshad");
@@ -52,6 +71,7 @@ public class StartOne {
 		
 		
 		given()
+		.filter(allureFilter)
 		.contentType("application/json")
 		.body(data)
 		.when()
@@ -75,6 +95,7 @@ public class StartOne {
 		
 		
    id = given()
+		   .filter(allureFilter)
 		.contentType("application/json")
 		.body(data)
 		.when()
@@ -84,7 +105,7 @@ public class StartOne {
 	}
 	
 	
-	@Test(priority = 4, dependsOnMethods = {"savingUserID"})
+	@Test(priority = 4)
 	void updatingData() {
 		
 		HashMap data = new HashMap();
@@ -94,6 +115,7 @@ public class StartOne {
 		
 		
     given()
+    .filter(allureFilter)
 		.contentType("application/json")
 		.body(data)
 		.when()
@@ -104,12 +126,12 @@ public class StartOne {
    
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 5)
 	void deleteUser() {
 		
 		
     given()
-    
+    .filter(allureFilter)
 		.when()
 				.delete("https://reqres.in/api/users/"+id)
 		.then()
